@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>RizzitGO spreadsheet – danske råd om fund, QC og størrelser</title>
+<meta name="description" content="Forstå RizzitGO spreadsheet: find kategorier, sammenlign størrelser og læs QC-fotos. Dansk guide til produktlinks, materialer og et mere overskueligt køb.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#162a43">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:title" content="RizzitGO spreadsheet – fra inspiration til et oplyst valg">
+<meta property="og:description" content="En dansk læseguide til produktlinks, størrelser, QC-fotos og kategorier hos cafans.com.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1620989928357-71ff9bbf1f34?auto=format&amp;fit=crop&amp;w=1200&amp;q=75">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<!--
+Filnavn: index.html.
+Tilføj først canonical og og:url, når sidens faktiske publiceringsadresse er kendt.
+
+Research 7. november 2026:
+Direkte adgang til Googles resultatside var blokeret.
+Disse 10 forskellige websteder blev fundet via tilgængelig websøgning.
+Listen er ikke en verificeret Google-top-10.
+
+https://rizzitgo.net/
+Temaer: produktoversigt, agentkøb og kategorier.
+
+https://ssfinds.com/rizzitgo-spreadsheet
+Temaer: produktlinks, QC-fotos og begynderguide.
+
+https://rizzitgo.info/
+Temaer: kategorier, produktoversigt og QC.
+Kun søgeuddrag tilgængeligt.
+
+https://rizzitgo.world/create-your-own-rizzitgo-spreadsheet
+Temaer: kolonner og personlig oversigt.
+
+https://linktr.ee/agreps
+Temaer: produktoversigt og fællesskab.
+
+https://rizzitgo.pics/
+Temaer: kategorier, sneakers og beklædning.
+
+https://hipobuyyupoo.net/rizzitgo-spreadsheet
+Temaer: QC og leveringsomkostninger.
+Kun søgeuddrag tilgængeligt.
+
+https://yu-poo.net/rizzitgo-spreadsheet
+Temaer: købsgang, QC og pakkesamling.
+
+https://docs.rizzitgo.com/guide/en
+Temaer: produktdata, QC og produktoversigter.
+
+https://rep.tools/guides/rizzitgo-spreadsheet
+Temaer: oprindelige produktlinks og linkformater.
+
+Sekundære søgetemaer:
+RizzitGO guide; RizzitGO produktlinks; RizzitGO QC;
+RizzitGO størrelsesguide.
+
+24 beslægtede søgetemaer indgår i den synlige tekst:
+produktoversigt for begyndere; sammenligning af produktlinks;
+kontrol af oprindeligt produktlink; størrelsesguide til sneakers;
+skoens indvendige længde; mål på en hættetrøje;
+pasform på en T-shirt; skulderbredde på en jakke;
+livvidde på bukser; længde på shorts; justerbar kasket;
+mål på en skuldertaske; materialer i accessories;
+syninger på sneakers; læsning af QC-fotos;
+nærbilleder af detaljer; farver i produktbilleder;
+produktvariant og modelnavn; sælgerens størrelsestabel;
+oversigt over samlede omkostninger; fragt og emballage;
+bestilling gennem en indkøbsagent; kontrol af lagerstatus;
+returvilkår før betaling.
+-->
+<style>
+:root {
+  color-scheme: light;
+  --ink: #162a43;
+  --muted: #4e5e6e;
+  --paper: #faf8f1;
+  --line: #d8ddd9;
+  --yellow: #e9f16b;
+  --blue: #e8edf3;
+  --white: #fff;
+  --max: 1180px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+a { color: inherit; text-underline-offset: 4px; }
+a:focus-visible,
+summary:focus-visible {
+  outline: 3px solid #885000;
+  outline-offset: 5px;
+}
+a:hover { text-decoration-thickness: 2px; }
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--blue);
+}
+h1,h2,h3,p,figure { margin: 0; }
+h1,h2,h3 { line-height: 1.12; text-wrap: balance; }
+h1 {
+  font-size: clamp(2.7rem,6vw,5.5rem);
+  letter-spacing: -.065em;
+  font-weight: 800;
+}
+h2 {
+  font-size: clamp(1.9rem,3.5vw,3rem);
+  letter-spacing: -.045em;
+}
+h3 { font-size: 1.25rem; letter-spacing: -.02em; }
+p+p { margin-top: 1rem; }
+.wrap {
+  width: min(var(--max),calc(100% - 40px));
+  margin: auto;
+}
+.top { border-bottom: 1px solid var(--line); }
+.top .wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  min-height: 82px;
+}
+.logo {
+  font-size: 1.45rem;
+  font-weight: 850;
+  letter-spacing: -.06em;
+  text-decoration: none;
+}
+.edition {
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 48px;
+  padding: 11px 20px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--ink);
+}
+.button:hover { background: #294565; }
+.button.light { background: var(--yellow); color: var(--ink); }
+.label {
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+}
+.categories {
+  padding: 25px 0 29px;
+  border-bottom: 1px solid var(--line);
+}
+.category-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.category-head p { font-size: .84rem; color: var(--muted); }
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 8px;
+}
+.category-grid a {
+  padding: 11px 12px;
+  border: 1px solid var(--line);
+  font-size: .86rem;
+  font-weight: 650;
+  text-decoration: none;
+  background: #fff;
+}
+.category-grid a:hover {
+  background: var(--yellow);
+  border-color: var(--ink);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 48px;
+  padding-top: 54px;
+  padding-bottom: 54px;
+  align-items: center;
+}
+.hero .label { margin-bottom: 20px; }
+.hero h1 span { display: block; }
+.hero .intro {
+  margin-top: 26px;
+  max-width: 52ch;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+.hero .button { margin-top: 27px; }
+.hero figure { position: relative; }
+.hero img { height: 490px; object-fit: cover; }
+.hero figcaption {
+  padding-top: 10px;
+  font-size: .76rem;
+  color: var(--muted);
+}
+.stamp {
+  position: absolute;
+  left: -22px;
+  top: 24px;
+  background: var(--yellow);
+  border: 1px solid var(--ink);
+  padding: 13px 19px;
+  font-size: .8rem;
+  font-weight: 800;
+  transform: rotate(-5deg);
+}
+.answer {
+  background: var(--ink);
+  color: white;
+  padding: 35px;
+}
+.answer-inner {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 35px;
+}
+.answer p { font-size: 1.1rem; max-width: 78ch; }
+.answer .label { color: var(--yellow); padding-top: 5px; }
+.section {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  border-bottom: 1px solid var(--line);
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 35px;
+  margin-bottom: 30px;
+}
+.section-head h2 { max-width: 650px; }
+.section-head p {
+  max-width: 33ch;
+  color: var(--muted);
+  font-size: .92rem;
+}
+.section .label { margin-bottom: 12px; }
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
+}
+.guide-grid article {
+  padding: 25px;
+  border: 1px solid var(--line);
+  background: white;
+}
+.num {
+  font-size: .85rem;
+  display: inline-block;
+  border-bottom: 3px solid var(--yellow);
+  margin-bottom: 24px;
+  font-weight: 800;
+}
+.guide-grid p {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: .94rem;
+}
+.mood-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 22px;
+}
+.mood-grid img { height: 290px; object-fit: cover; }
+.mood-grid figcaption { padding-top: 16px; }
+.mood-grid figcaption p {
+  font-size: .87rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.credit {
+  display: block;
+  font-size: .72rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
+.note {
+  margin-top: 24px;
+  padding-left: 16px;
+  border-left: 3px solid var(--ink);
+  font-size: .87rem;
+  color: var(--muted);
+}
+.journal {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 50px;
+}
+.journal-intro p {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: .94rem;
+}
+.articles article {
+  padding: 0 0 30px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid var(--line);
+}
+.articles article:last-child {
+  margin-bottom: 0;
+  border: 0;
+  padding-bottom: 0;
+}
+.articles h3 { font-size: 1.55rem; margin-bottom: 16px; }
+.articles p { color: var(--muted); font-size: .96rem; }
+.articles .label { color: var(--ink); font-size: .68rem; }
+.table-wrap { overflow-x: auto; margin-top: 25px; }
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: white;
+  font-size: .9rem;
+}
+th,td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--line);
+}
+th { background: var(--blue); }
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 55px;
+}
+.faq-layout h2 { max-width: 10ch; }
+details {
+  border-top: 1px solid var(--line);
+  padding: 19px 0;
+}
+details:last-child { border-bottom: 1px solid var(--line); }
+summary { font-weight: 750; cursor: pointer; line-height: 1.4; }
+details p {
+  margin-top: 13px;
+  color: var(--muted);
+  font-size: .95rem;
+}
+.closing {
+  background: var(--yellow);
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+.closing h2 { font-size: 2rem; }
+.closing p { margin-top: 10px; max-width: 60ch; }
+footer {
+  padding: 30px 0 40px;
+  border-top: 1px solid var(--line);
+  font-size: .8rem;
+  color: var(--muted);
+}
+footer .logo {
+  display: inline-block;
+  color: var(--ink);
+  margin-bottom: 15px;
+}
+footer p { max-width: 100ch; }
+footer small { display: block; margin-top: 16px; }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+@media(min-width:900px) {
+  .below {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 650px;
+  }
+}
+@media(max-width:850px) {
+  .category-grid { grid-template-columns: repeat(3,1fr); }
+  .hero { gap: 25px; }
+  .hero img { height: 420px; }
+  .guide-grid { gap: 12px; }
+  .guide-grid article { padding: 20px; }
+  .mood-grid { gap: 14px; }
+  .mood-grid img { height: 230px; }
+  .journal { grid-template-columns: 200px 1fr; gap: 30px; }
+  .answer-inner { grid-template-columns: 140px 1fr; gap: 20px; }
+}
+@media(max-width:620px) {
+  .wrap { width: calc(100% - 32px); }
+  .top .wrap { min-height: 70px; }
+  .edition { font-size: .62rem; letter-spacing: .05em; }
+  .top .button { display: none; }
+  .category-head { display: block; }
+  .category-head p { margin-top: 5px; }
+  .category-grid { grid-template-columns: repeat(2,1fr); }
+  .category-grid a { font-size: .8rem; padding: 10px; }
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    gap: 30px;
+  }
+  .hero img { height: 340px; }
+  .stamp { left: -7px; top: 20px; }
+  .answer { padding: 27px 20px; }
+  .answer-inner { grid-template-columns: 1fr; gap: 15px; }
+  .answer p { font-size: 1rem; }
+  .section { padding-top: 42px; padding-bottom: 42px; }
+  .section-head { display: block; }
+  .section-head p { margin-top: 18px; max-width: unset; }
+  .guide-grid,.journal,.faq-layout { grid-template-columns: 1fr; }
+  .guide-grid { gap: 14px; }
+  .num { margin-bottom: 15px; }
+  .mood-grid { grid-template-columns: 1fr 1fr; gap: 25px 14px; }
+  .mood-grid figure:first-child { grid-column: 1/-1; }
+  .mood-grid img { height: 210px; }
+  .mood-grid figure:first-child img { height: 330px; }
+  .mood-grid h3 { font-size: 1.1rem; }
+  .journal,.faq-layout { gap: 28px; }
+  .faq-layout h2 { max-width: unset; }
+  .closing { padding: 28px 22px; display: block; margin: 35px 0; }
+  .closing .button { margin-top: 22px; }
+  th,td { padding: 11px; font-size: .82rem; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "RizzitGO spreadsheet – danske råd om fund, QC og størrelser",
+      "description": "En uafhængig dansk guide til produktoversigter, størrelser og QC-fotos med kategorilinks til cafans.com.",
+      "inLanguage": "da",
+      "about": {
+        "@type": "Thing",
+        "name": "RizzitGO spreadsheet"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Sådan læser du en produktoversigt",
+      "inLanguage": "da",
+      "description": "Kontrollér produktlink, variant og mål, før du sammenligner varer.",
+      "articleBody": "En produktoversigt for begyndere er mest nyttig, når hvert fund kan spores til en bestemt vare. Ved sammenligning af produktlinks skal du kontrollere produktvariant og modelnavn, så farve, materiale og størrelse er de samme. Kontrol af oprindeligt produktlink hjælper dig med at opdage et ændret produkt eller en inaktiv side."
+    },
+    {
+      "@type": "FAQPage",
+      "inLanguage": "da",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hvad er et RizzitGO spreadsheet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Det er en produktoversigt med links, som bruges til at finde og sammenligne varer til køb gennem en indkøbsagent. Indhold og linkformat varierer fra liste til liste."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan jeg bestille direkte på denne side?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nej. Dette er en læseguide. Kategoriknapperne åbner de angivne kategorier hos cafans.com, og øvrige handlingslinks åbner cafans.com. De sender dig ikke direkte til RizzitGO."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Beviser QC-fotos, at en mærkevare er ægte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nej. QC-fotos kan hjælpe med at vurdere synlige detaljer og mål, men de dokumenterer ikke i sig selv ægthed, holdbarhed eller materialernes sammensætning."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Hvordan vælger jeg størrelse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sammenlign sælgerens mål i centimeter med en vare, du allerede har. Til sko bør du kontrollere den oplyste indvendige længde og målemetoden frem for kun at bruge EU-størrelsen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Er varens pris den samlede pris?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ikke nødvendigvis. Kontrollér produktpris, indenrigsfragt, agentens gebyrer, international fragt og eventuelle importomkostninger, før du betaler."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Er siden officiel eller tilknyttet mærkerne?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nej. Denne guide er ikke en officiel RizzitGO-side og har ingen angivet officiel tilknytning til Nike, Louis Vuitton, Gucci, Hermès eller Dior. Billederne er redaktionel inspiration."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/dkfxh/">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="https://www.cafans.com" aria-label="Besøg cafans.com">cafans.com</a>
+    <span class="edition">Dansk læseguide · stil &amp; overblik</span>
+    <a class="button" href="https://www.cafans.com">Åbn kataloget <span aria-hidden="true">↗</span></a>
+  </div>
+</header>
+
+<nav class="categories" aria-label="Produktkategorier hos cafans.com">
+  <div class="wrap">
+    <div class="category-head">
+      <h2 class="label">Start med en kategori</h2>
+      <p>Alle kategorier åbner hos cafans.com.</p>
+    </div>
+    <div class="category-grid">
+      <a href="https://cafans.com/category-911-Shoes.html">Shoes · Sko</a>
+      <a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hoodies/Sweaters</a>
+      <a href="https://cafans.com/category-913-T-Shirts.html">T-Shirts</a>
+      <a href="https://cafans.com/category-914-Jackets.html">Jackets · Jakker</a>
+      <a href="https://cafans.com/category-915-Pants%2FShorts.html">Pants/Shorts</a>
+      <a href="https://cafans.com/category-916-Headwear.html">Headwear · Hovedbeklædning</a>
+      <a href="https://cafans.com/category-917-Sets.html">Sets · Sæt</a>
+      <a href="https://cafans.com/category-918-underwear%2Funderpants.html">Underwear/underpants</a>
+      <a href="https://cafans.com/category-919-Jersey.html">Jersey · Trøjer</a>
+      <a href="https://cafans.com/category-920-Accessories.html">Accessories · Tilbehør</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <section class="hero wrap" aria-labelledby="main-title">
+    <div>
+      <p class="label">Find din retning. Tjek detaljerne.</p>
+      <h1 id="main-title">RizzitGO spreadsheet<span>med blik for detaljen.</span></h1>
+      <p class="intro">Gør en lang liste af fund til et overskueligt valg. Her får du en dansk RizzitGO guide til produktlinks, pasform og QC-fotos — med en hurtig vej videre til kategorier hos cafans.com.</p>
+      <a class="button light" href="https://www.cafans.com">Se udvalget hos cafans.com <span aria-hidden="true">↗</span></a>
+    </div>
+    <figure>
+      <span class="stamp">Først pasform.<br>Så beslutning.</span>
+      <img
+        src="https://images.unsplash.com/photo-1620989928357-71ff9bbf1f34?auto=format&amp;fit=crop&amp;w=1000&amp;q=75"
+        srcset="https://images.unsplash.com/photo-1620989928357-71ff9bbf1f34?auto=format&amp;fit=crop&amp;w=600&amp;q=75 600w, https://images.unsplash.com/photo-1620989928357-71ff9bbf1f34?auto=format&amp;fit=crop&amp;w=1000&amp;q=75 1000w"
+        sizes="(max-width:620px) 100vw, 48vw"
+        width="1000"
+        height="1050"
+        alt="Hvide Nike Air Force 1-sneakers fotograferet som stilinspiration"
+        fetchpriority="high"
+        loading="eager"
+        decoding="async">
+      <figcaption>Stilinspiration, ikke en lagerført vare. Foto: Ervan M Wirawan / Unsplash.</figcaption>
+    </figure>
+  </section>
+
+  <aside class="answer wrap" aria-label="Kort forklaring">
+    <div class="answer-inner">
+      <p class="label">Det korte svar</p>
+      <p>Et <strong>RizzitGO spreadsheet</strong> er en produktoversigt med links til fund, ofte organiseret efter kategori. Brug den som udgangspunkt: kontrollér den konkrete vare, dens mål og vilkår, før du køber. Denne side er en guide og indeholder ikke et downloadbart regneark.</p>
+    </div>
+  </aside>
+
+  <section class="section wrap" aria-labelledby="three-title">
+    <div class="section-head">
+      <div>
+        <p class="label">En enkel arbejdsgang</p>
+        <h2 id="three-title">Tre ting, der gør forskellen.</h2>
+      </div>
+      <p>En flot produktpræsentation er begyndelsen. Det er detaljerne, der hjælper dig videre.</p>
+    </div>
+    <div class="guide-grid">
+      <article>
+        <span class="num">01 / Find varen</span>
+        <h3>RizzitGO produktlinks</h3>
+        <p>Notér produktnavn, kategori og valgt variant. Åbn altid varen igen: et gemt billede fortæller ikke, om linket stadig peger på samme produkt.</p>
+      </article>
+      <article>
+        <span class="num">02 / Sammenlign mål</span>
+        <h3>RizzitGO størrelsesguide</h3>
+        <p>Mål en tilsvarende vare, du bruger godt. Sammenhold centimeter med sælgerens størrelsestabel, og læs, hvordan målene er taget.</p>
+      </article>
+      <article>
+        <span class="num">03 / Se efter detaljer</span>
+        <h3>RizzitGO QC</h3>
+        <p>Brug tydelige fotos til at kontrollere farve, syninger og den valgte variant. Bed om flere billeder, hvis en vigtig detalje ikke kan ses.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap below" aria-labelledby="inspiration-title">
+    <div class="section-head">
+      <div>
+        <p class="label">Visuel notesbog</p>
+        <h2 id="inspiration-title">Form, overflade og små detaljer.</h2>
+      </div>
+      <p>Læs billederne som inspiration. De er ikke produktlinks eller dokumentation for aktuelle varer.</p>
+    </div>
+    <div class="mood-grid">
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1621310397228-c06ee011e079?auto=format&amp;fit=crop&amp;w=700&amp;q=70"
+          width="700"
+          height="700"
+          loading="lazy"
+          decoding="async"
+          alt="Brun og sort Gucci-skuldertaske hængende på en dør">
+        <figcaption>
+          <h3>Taskens proportioner</h3>
+          <p>Tjek mål på en skuldertaske, remmens længde og lukningen. Et nærbillede siger mere om overfladen end et fjernt miljøfoto.</p>
+          <span class="credit">Gucci · Foto: Fujiphilm / Unsplash</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1753718605172-86d37d27596d?auto=format&amp;fit=crop&amp;w=550&amp;q=70"
+          width="550"
+          height="650"
+          loading="lazy"
+          decoding="async"
+          alt="Louis Vuitton-håndtaske udstillet på et gyldent stativ">
+        <figcaption>
+          <h3>Farven i kontekst</h3>
+          <p>Lys påvirker farver i produktbilleder. Sammenlign flere vinkler, og se efter en beskrivelse af materiale og finish.</p>
+          <span class="credit">Louis Vuitton · Foto: Ibrahim guetar / Unsplash</span>
+        </figcaption>
+      </figure>
+      <figure>
+        <img
+          src="https://images.unsplash.com/photo-1759563869318-54434b2abc68?auto=format&amp;fit=crop&amp;w=550&amp;q=70"
+          width="550"
+          height="650"
+          loading="lazy"
+          decoding="async"
+          alt="Dior-logo på hvidt stof i en åben æske">
+        <figcaption>
+          <h3>Detaljer før emballage</h3>
+          <p>Materialer i accessories bør fremgå af vareteksten. Et logo eller en elegant æske fortæller ikke alene noget om indholdets kvalitet.</p>
+          <span class="credit">Dior · Foto: Laura Chouette / Unsplash</span>
+        </figcaption>
+      </figure>
+    </div>
+    <p class="note">Nike, Louis Vuitton, Gucci, Hermès og Dior nævnes som stilreferencer. Fotografierne dokumenterer hverken ægthed, tilgængelighed eller en officiel forbindelse til cafans.com.</p>
+  </section>
+
+  <section class="section wrap journal below" aria-labelledby="journal-title">
+    <div class="journal-intro">
+      <p class="label">Temaer &amp; korte artikler</p>
+      <h2 id="journal-title">En bedre shortlist begynder her.</h2>
+      <p>Brug disse noter, når du vil gøre dine fund lettere at sammenligne, uanset om du starter med sneakers, en hættetrøje eller tilbehør.</p>
+    </div>
+    <div class="articles">
+      <article>
+        <p class="label">Tema 01 · Overblik</p>
+        <h3>Sådan læser du en produktoversigt</h3>
+        <p>En produktoversigt for begyndere er mest nyttig, når hvert fund kan spores til en bestemt vare. Ved sammenligning af produktlinks skal du kontrollere produktvariant og modelnavn, så farve, materiale og størrelse er de samme. Kontrol af oprindeligt produktlink hjælper dig med at opdage et ændret produkt eller en inaktiv side.</p>
+        <p>Gem dine egne noter om mål, spørgsmål og valgte varianter. Lav kontrol af lagerstatus på den konkrete produktside, når du er klar til at bestille; en kategorioversigt er ikke en reservation.</p>
+      </article>
+
+      <article>
+        <p class="label">Tema 02 · Pasform</p>
+        <h3>Centimeter giver mere mening end et bogstav</h3>
+        <p>En størrelsesguide til sneakers bør forklare skoens indvendige længde og den anvendte målemetode. EU-størrelsen er kun ét holdepunkt. Ved brede fødder kan det også være relevant at spørge til pladsen ved forfoden.</p>
+        <p>Ved mål på en hættetrøje er brystvidde og længde gode udgangspunkter. Pasform på en T-shirt afhænger også af ærmer og ønsket bevægelsesrum. Brug skulderbredde på en jakke, livvidde på bukser og længde på shorts som konkrete sammenligningspunkter. En justerbar kasket har stadig en pasform: kontrollér omkreds og lukning.</p>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">Mål og detaljer, du kan kontrollere før køb</caption>
+            <thead>
+              <tr>
+                <th scope="col">Kategori</th>
+                <th scope="col">Sammenlign især</th>
+                <th scope="col">Spørg ved tvivl</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Sneakers</th>
+                <td>Indvendig længde og bredde</td>
+                <td>Hvordan er længden målt?</td>
+              </tr>
+              <tr>
+                <th scope="row">Overdele</th>
+                <td>Bryst, skulder og længde</td>
+                <td>Er målene taget fladt?</td>
+              </tr>
+              <tr>
+                <th scope="row">Bukser og shorts</th>
+                <td>Livvidde, benlængde og snit</td>
+                <td>Er linningen elastisk?</td>
+              </tr>
+              <tr>
+                <th scope="row">Tasker og tilbehør</th>
+                <td>Højde, bredde og rem</td>
+                <td>Hvilket materiale er angivet?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article>
+        <p class="label">Tema 03 · Billedkontrol</p>
+        <h3>Det skal du kigge efter i QC-fotos</h3>
+        <p>Læsning af QC-fotos begynder med et helhedsbillede: er model, farve og størrelse de valgte? Gå derefter videre til nærbilleder af detaljer. Se efter skæve syninger på sneakers, forskelle mellem højre og venstre sko samt synlige skader eller manglende dele.</p>
+        <p>Fotos kan ikke vise alle egenskaber. De fortæller ikke sikkert, hvordan stoffet føles, hvor længe sålen holder, eller om en mærkevare er ægte. Stil et præcist spørgsmål om det, du mangler, og læs vilkårene for håndtering af fejl.</p>
+      </article>
+
+      <article>
+        <p class="label">Tema 04 · Beslutningen</p>
+        <h3>Fra varepris til et samlet overblik</h3>
+        <p>Lav en oversigt over samlede omkostninger frem for kun at notere vareprisen. Ved bestilling gennem en indkøbsagent kan der være særskilte beløb for indenrigslevering, service og international fragt. Fragt og emballage bør vurderes sammen med den faktiske pakke, ikke kun produktets udseende.</p>
+        <p>Kontrollér de aktuelle betalings- og leveringsoplysninger hos den valgte udbyder. Læs returvilkår før betaling, og få afklaret, hvem der håndterer en fejl. Denne guide angiver ingen faste priser, gebyrer eller leveringstider.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap faq-layout below" aria-labelledby="faq-title">
+    <div>
+      <p class="label">Spørgsmål &amp; svar</p>
+      <h2 id="faq-title">Svar, du kan bruge med det samme.</h2>
+    </div>
+    <div>
+      <details open>
+        <summary>Hvad er et RizzitGO spreadsheet?</summary>
+        <p>Det er en produktoversigt med links, som bruges til at finde og sammenligne varer til køb gennem en indkøbsagent. Indhold og linkformat varierer fra liste til liste.</p>
+      </details>
+      <details>
+        <summary>Kan jeg bestille direkte på denne side?</summary>
+        <p>Nej. Dette er en læseguide. Kategoriknapperne åbner de angivne kategorier hos cafans.com, og øvrige handlingslinks åbner cafans.com. De sender dig ikke direkte til RizzitGO.</p>
+      </details>
+      <details>
+        <summary>Beviser QC-fotos, at en mærkevare er ægte?</summary>
+        <p>Nej. QC-fotos kan hjælpe med at vurdere synlige detaljer og mål, men de dokumenterer ikke i sig selv ægthed, holdbarhed eller materialernes sammensætning.</p>
+      </details>
+      <details>
+        <summary>Hvordan vælger jeg størrelse?</summary>
+        <p>Sammenlign sælgerens mål i centimeter med en vare, du allerede har. Til sko bør du kontrollere den oplyste indvendige længde og målemetoden frem for kun at bruge EU-størrelsen.</p>
+      </details>
+      <details>
+        <summary>Er varens pris den samlede pris?</summary>
+        <p>Ikke nødvendigvis. Kontrollér produktpris, indenrigsfragt, agentens gebyrer, international fragt og eventuelle importomkostninger, før du betaler.</p>
+      </details>
+      <details>
+        <summary>Er siden officiel eller tilknyttet mærkerne?</summary>
+        <p>Nej. Denne guide er ikke en officiel RizzitGO-side og har ingen angivet officiel tilknytning til Nike, Louis Vuitton, Gucci, Hermès eller Dior. Billederne er redaktionel inspiration.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <aside class="closing">
+      <div>
+        <p class="label">Næste skridt</p>
+        <h2>Find en kategori. Sammenlign med ro.</h2>
+        <p>Tag dine noter om mål, variant og detaljer med videre, når du udforsker kataloget.</p>
+      </div>
+      <a class="button" href="https://www.cafans.com">Besøg cafans.com <span aria-hidden="true">↗</span></a>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="https://www.cafans.com">cafans.com</a>
+    <p>Uafhængig dansk informationsside om RizzitGO spreadsheet og sammenligning af modefund. Ingen ordrebehandling foregår her. Kategorilinks går til de angivne kategorier hos cafans.com; alle andre handlingslinks går til cafans.com.</p>
+    <small>Redaktionelle inspirationsfotos fra Unsplash. Ingen oplyst officiel tilknytning til de nævnte mærker eller RizzitGO.</small>
+  </div>
+</footer>
+</body>
+</html>
